@@ -14,7 +14,9 @@ public class Base {
 
     @Before
     public void start() {
+        System.setProperty("webdriver.chrome.driver", "/home/ilya/Downloads/chromedriver");
         driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
