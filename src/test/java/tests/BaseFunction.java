@@ -32,4 +32,18 @@ public class BaseFunction extends Base {
         }
     }
 
+    public void goToMainDirectory ()
+    {
+        driver.findElement(By.cssSelector(".header [title=\"Catalog\"]")).click();
+    }
+
+    public void searchImageSticker()
+    {
+        List <WebElement> image = driver.findElements(By.cssSelector(".image-wrapper"));
+        for (int i = 0; i < image.size(); i++)
+        {
+            List <WebElement> sticker = image.get(i).findElements(By.cssSelector(".sticker"));
+            assert sticker.size()==1;
+        }
+    }
 }
