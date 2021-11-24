@@ -26,7 +26,7 @@ public class BaseFunction extends Base {
                 for (int j = 0; j < subElements.size(); j++)
                 {
                     driver.findElements(By.cssSelector("ul.docs > li")).get(j).click();
-                    driver.findElement(By.cssSelector(".fa-stack.icon-wrapper")).isDisplayed();
+                    driver.findElement(By.cssSelector("h1")).isDisplayed();
                 }
             }
         }

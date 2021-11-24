@@ -23,7 +23,7 @@ public class Base {
 
     @After
     public void stop() {
-//        driver.quit();
-//        driver = null;
+        driver.quit();
+        driver = null;
     }
 }
